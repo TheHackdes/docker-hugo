@@ -2,6 +2,22 @@ theme: hugo-theme-stack
 title: Example Site
 copyright: Example Person
 
+DefaultContentLanguage: en
+
+languages:
+    en:
+        languageName: English
+        title: Example Site
+        weight: 1
+        params:
+            description: Example description
+    fr:
+        languageName: Francais
+        title: Exemple de SIte
+        weight: 2
+        params:
+            description: Description exemple
+
 pagination:
     pagerSize: 3
 
