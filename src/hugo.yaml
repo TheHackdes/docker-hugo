@@ -7,12 +7,14 @@ DefaultContentLanguage: en
 languages:
     en:
         languageName: English
+        contentDir: content/en
         title: Example Site
         weight: 1
         params:
             description: Example description
     fr:
         languageName: Francais
+        contentDir: content/fr
         title: Exemple de SIte
         weight: 2
         params:
