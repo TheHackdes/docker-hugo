@@ -1,6 +1,6 @@
 services:
   hugo_app:
-    image: docker pull ghcr.io/thehackdes/docker-hugo:main
+    image: ghcr.io/thehackdes/docker-hugo:main
     container_name: hugo_app
     hostname: hugo_app
     restart: always
@@ -9,7 +9,7 @@ services:
     volumes:
       - volume_hugo_app:/srv
     environment:
-      WEBSITE: "mybewsite.com"
+      WEBSITE: "mywebsite.com"
 
 volumes:
   volume_hugo_app:
