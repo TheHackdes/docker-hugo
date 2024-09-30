@@ -1,0 +1,18 @@
+services:
+  hugo_app:
+    image: TheHackdes/hugo:latest
+    container_name: hugo_app
+    hostname: hugo_app
+    restart: always
+    ports:
+      - 1313:1313
+    volumes:
+      - volume_hugo_app:/srv
+    environment:
+      WEBSITE: "mybewsite.com"
+
+volumes:
+  volume_hugo_app:
+    name: volume_hugo_app
+    external: false
+    
