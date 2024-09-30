@@ -28,7 +28,7 @@ docker run -dti \
 ```yaml
 services:
   hugo_app:
-    image: toto:latest
+    image: docker pull ghcr.io/thehackdes/docker-hugo:main
     container_name: hugo_app
     hostname: hugo_app
     restart: always
@@ -49,7 +49,7 @@ volumes:
 ## Create new page
 
 ```bash
-docker exec -ti hugo_app hugo new -s /srv/mywebsite.com/ content/MyPost.md
+docker exec -ti hugo_app hugo new -s /srv/mywebsite.com/ content/post/MyPost.md
 ```
 
 Dont't forget to change daft: true to false to see this page.

@@ -1,6 +1,6 @@
 services:
   hugo_app:
-    image: TheHackdes/hugo:latest
+    image: docker pull ghcr.io/thehackdes/docker-hugo:main
     container_name: hugo_app
     hostname: hugo_app
     restart: always
