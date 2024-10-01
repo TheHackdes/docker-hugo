@@ -7,11 +7,10 @@ Default theme : Stack (https://github.com/CaiJimmy/hugo-theme-stack)
 ### Build Image
 
 ```bash
-git clone XXX
-cd XXX
+git clone https://github.com/TheHackdes/docker-hugo
+cd docker-hugo
 
 docker build -f Dockerfile -t hugo .
-
 ```
 
 ### Run Container
@@ -19,8 +18,9 @@ docker build -f Dockerfile -t hugo .
 ```bash
 docker run -dti \
     -e WEBSITE="mywebsite.com" \
+    -e OPTIONS="--bind 0.0.0.0 --appendPort=false --baseURL=http://127.0.0.1:1313" \
     -p 1313:1313 \
-    image
+    hugo:latest
 ```
 
 ### Docker Compose
@@ -38,7 +38,7 @@ services:
       - volume_hugo_app:/srv
     environment:
       WEBSITE: "mywebsite.com"
-      OPTIONS: "--bind 0.0.0.0 --appendPort=false --baseURL=\"http://127.0.0.1:1313\""
+      OPTIONS: "--bind 0.0.0.0 --appendPort=false --baseURL=http://127.0.0.1:1313"
 
 volumes:
   volume_hugo_app:
