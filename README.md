@@ -38,6 +38,7 @@ services:
       - volume_hugo_app:/srv
     environment:
       WEBSITE: "mywebsite.com"
+      OPTIONS: "--bind 0.0.0.0 --appendPort=false --baseURL=\"http://127.0.0.1:1313\""
 
 volumes:
   volume_hugo_app:
