@@ -2,8 +2,7 @@ FROM alpine:latest
 
 RUN apk add hugo bash git
 
-COPY ./src/init.sh /root/init.sh
-COPY ./src/hugo.yaml /root/hugo.yaml
+COPY ./src/* /root/.
 RUN chmod +x /root/init.sh
 
 WORKDIR /srv/
